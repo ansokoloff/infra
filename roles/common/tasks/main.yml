@@ -2,6 +2,7 @@
 - name: Install software
   hosts: all
   gather_facts: true
+  become: yes
   
   tasks:
      - name:  Install mc 
