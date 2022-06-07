@@ -1,3 +1,5 @@
 .terraform.lock.hcl
 epam_rsa.pub
 .terraform/terraform.tfstate
+cloud.pem
+.terraform/providers/registry.terraform.io/hashicorp/local/2.2.3/darwin_arm64/terraform-provider-local_v2.2.3_x5
