@@ -1,7 +1,16 @@
 ---
 - name: install mc
   hosts: all
-  tasks:
-    - debug: msg=hello
+  ansible.builtin.package:
+    name:  mc
+    state: present
+    
+- name: install screen
+  hosts: all
+  ansible.builtin.package:
+    name:  net-tools
+    state: present
+    
+
 
 # tasks file for common
