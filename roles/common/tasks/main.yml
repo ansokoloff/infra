@@ -1,15 +1,15 @@
 ---
-- name: install mc
-  hosts: all
-  ansible.builtin.package:
-    name:  mc
-    state: present
-    
-- name: install screen
-  hosts: all
-  ansible.builtin.package:
-    name:  net-tools
-    state: present
+  - name: install mc
+    hosts: all
+    ansible.builtin.package:
+      name:  mc
+      state: present
+      
+  - name: install screen
+    hosts: all
+    ansible.builtin.package:
+      name:  net-tools
+      state: present
     
 
 
