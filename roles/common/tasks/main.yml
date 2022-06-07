@@ -1,2 +1,7 @@
 ---
+- name: install mc
+  hosts: all
+  tasks:
+    - debug: msg=hello
+
 # tasks file for common
