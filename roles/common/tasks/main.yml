@@ -1,16 +1,20 @@
 ---
-  - name: install mc
-    hosts: all
-    ansible.builtin.package:
-      name:  mc
-      state: present
-      
-  - name: install screen
-    hosts: all
-    ansible.builtin.package:
-      name:  net-tools
-      state: present
+ - name:  Install mc 
+   apt:
+    name: mc
+    state: present
     
+ - name:  Install net-tools 
+   apt:
+    name: net-tools
+    state: present
 
+#  - name:  Copy config 
+#    ansible.builtin.copy:
+#     src: roles/vsftpd/files/vsftpd.conf 
+#     dest: /etc/vsftpd.conf
 
-# tasks file for common
+#  - name:  Run vsfrpd 
+#    ansible.builtin.service:
+#     name: vsftpd 
+#     state: started
