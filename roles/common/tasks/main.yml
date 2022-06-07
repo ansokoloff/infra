@@ -1,6 +1,6 @@
 ---
 - name: Install software
-  hosts: cisco_routers
+  hosts: all
   gather_facts: true
   
   tasks:
