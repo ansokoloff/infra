@@ -1,11 +1,11 @@
 ---
  - name:  Install mc 
-   apt:
+   ansible.builtin.package:
     name: mc
     state: present
     
  - name:  Install net-tools 
-   apt:
+   ansible.builtin.package:
     name: net-tools
     state: present
 
