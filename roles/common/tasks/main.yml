@@ -6,14 +6,17 @@
   
   tasks:
      - name:  Install mc 
-       ansible.builtin.package:
-        name: mc
+       apt:
+        pkg:
+         - mc
+         - net-tools
         state: present
+        update_cache: yes
         
-     - name:  Install net-tools 
-       ansible.builtin.package:
-        name: net-tools
-        state: present
+    #  - name:  Install net-tools 
+    #    ansible.builtin.package:
+    #     name: net-tools
+    #     state: present
 
 #  - name:  Copy config 
 #    ansible.builtin.copy:
