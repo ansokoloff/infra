@@ -1,13 +1,18 @@
 ---
- - name:  Install mc 
-   ansible.builtin.package:
-    name: mc
-    state: present
-    
- - name:  Install net-tools 
-   ansible.builtin.package:
-    name: net-tools
-    state: present
+- name: Install software
+  hosts: cisco_routers
+  gather_facts: true
+  
+  tasks:
+     - name:  Install mc 
+       ansible.builtin.package:
+        name: mc
+        state: present
+        
+     - name:  Install net-tools 
+       ansible.builtin.package:
+        name: net-tools
+        state: present
 
 #  - name:  Copy config 
 #    ansible.builtin.copy:
