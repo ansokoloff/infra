@@ -151,6 +151,7 @@ resource "google_compute_instance" "control" {
       "sudo apt update",
       "sudo apt -y install ansible", 
       "git clone https://github.com/ansokoloff/infra.git",
+      "cp infra/ansible.cfg /etc/ansible/ansible.cfg",
       "echo '[localhost]' >> hosts",
       "echo '127.0.0.1' >> hosts",
       "echo '[dockerfarm]' >> hosts",
