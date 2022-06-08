@@ -1,6 +1,5 @@
 ---
 - name: Install software
-  hosts: all
   gather_facts: true
   become: yes
   
