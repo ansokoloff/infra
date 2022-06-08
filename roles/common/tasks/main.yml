@@ -1,17 +1,12 @@
 ---
-- name: Install software
-  gather_facts: true
-  become: yes
-  
-  tasks:
-     - name:  Install mc 
-       apt:
-        pkg:
-         - mc
-         - net-tools
-        state: present
-        update_cache: yes
-        
+ - name:  Install mc 
+   apt:
+    pkg:
+    - mc
+    - net-tools
+    state: present
+    update_cache: yes
+ 
     #  - name:  Install net-tools 
     #    ansible.builtin.package:
     #     name: net-tools

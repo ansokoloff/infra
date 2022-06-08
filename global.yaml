@@ -1,4 +1,12 @@
 ---
  - hosts: all
+   gather_facts: true
+   become: yes
    roles: 
    - common
+
+ - hosts: localhost
+   gather_facts: true
+   become: yes
+   roles:
+   - jenkins

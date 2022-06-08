@@ -1,2 +1,32 @@
 ---
-# tasks file for jenkins
+ - name:  Update cache
+   apt:
+        update_cache: yes
+
+ - name: Install openjdk-11-jre
+   apt:
+        name: openjdk-11-jre
+        state: present
+
+ - name: Add key
+   apt_key: 
+        url: https://pkg.jenkins.io/debian-stable/jenkins.io.key
+        state: present
+
+ - name: Ensure the repository is configured
+   apt_repository: 
+        repo: deb https://pkg.jenkins.io/debian-stable binary/ 
+        state: present
+ - name:  Update cache
+   apt:
+        update_cache: yes
+        state: latest
+ - name: Install Jenkins
+   apt:
+        name: jenkins
+        state: present
+
+ - name: Start & Enable Jenkins
+   service: 
+        name: jenkins
+        state: started
