@@ -4,5 +4,11 @@
     pkg:
     - mc
     - net-tools
+    - openjdk-11-jre
     state: present
     update_cache: yes
+
+ - name: Install env
+   ansible.builtin.git:
+    repo: https://github.com/ansokoloff/myenviroinments.git
+    dest: /home/arctic/enviroinmemt
