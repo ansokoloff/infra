@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
  - name:  Install mc 
    apt:
     pkg:
@@ -7,6 +8,21 @@
     state: present
     update_cache: yes
  
+=======
+# - name: Install software
+#   gather_facts: true
+#   become: yes
+  
+#   tasks:
+     - name:  Install mc 
+       apt:
+        pkg:
+         - mc
+         - net-tools
+        state: present
+        update_cache: yes
+        
+>>>>>>> 26cbf9dc28157eb73d751c2b32f33274ca14621e
     #  - name:  Install net-tools 
     #    ansible.builtin.package:
     #     name: net-tools
