@@ -1,9 +1,6 @@
 ---
  - hosts: all
-<<<<<<< HEAD
    gather_facts: true
-=======
->>>>>>> 26cbf9dc28157eb73d751c2b32f33274ca14621e
    become: yes
    roles: 
    - common
