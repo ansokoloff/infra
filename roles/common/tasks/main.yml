@@ -6,29 +6,3 @@
     - net-tools
     state: present
     update_cache: yes
-
- - name: Install env
-   ansible.builtin.git:
-    repo: https://github.com/ansokoloff/myenviroinments.git
-    dest: /home/arctic/enviroinmemt
-
- - name: delete .git
-   ansible.builtin.file:
-    path: 
-    - /home/arctic/enviroinmemt/.git
-    - /home/arctic/enviroinmemt/.gitignore
-    state: absent
-
- - name: Copy env
-   shell:
-     cmd: 
-     - 'cp -R /home/arctic/enviroinmemt/ /tmp/bla'
-     - 'cp -R /tmp/bla/ /home/arctic'
-     - 'rm -rf /tmp/bla'
-
- - name: delete clone repo
-   ansible.builtin.file:
-    path: /home/arctic/enviroinmemt
-    state: absent
-
-
