@@ -1,0 +1,21 @@
+---
+ - name:  create user jenkins 
+   ansible.builtin.user:
+     name: jenkins
+     comment: Jenkins
+     shell: /bin/bash
+     home: /var/lib/jenkins
+     groups: docker
+
+ - name: Create a directory .ssh
+   ansible.builtin.file:
+     path: /var/lib/jenkins/.ssh
+     state: directory
+     owner: jenkins
+     mode: '0700'
+ 
+ - name: Upload authorized_keys for Jenkins
+   authorized_key:
+    user: jenkins
+    state: present
+    key: "{{ lookup('file', '/tmp/a') }}"

@@ -1,0 +1,13 @@
+---
+ - name:  generated ssh keys for jenkins 
+   user: 
+    name: jenkins
+    generate_ssh_key: yes
+    ssh_key_type: rsa
+    ssh_key_bits: 4096
+    ssh_key_file: /var/lib/jenkins/.ssh/id_rsa
+    force: no
+
+ - name: Create a copy of id_rsa.pub
+   shell:
+     cmd: cp /var/lib/jenkins/.ssh/id_rsa.pub /tmp/a && chmod 666 /tmp/a

@@ -10,3 +10,24 @@
    become: yes
    roles:
    - jenkins
+
+ - hosts: localhost
+   gather_facts: true
+   become: yes
+   roles:
+   - createkey
+
+ - hosts: 
+   - dockerfarm
+   - kuber
+   gather_facts: true
+   become: yes
+   roles:
+   - createusersremote
+
+ - hosts: localhost
+   gather_facts: true
+   become: yes
+   roles:
+   - deletesin
+ 

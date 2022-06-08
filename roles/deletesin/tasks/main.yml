@@ -1,0 +1,5 @@
+---
+ - name: Delete file from /tmp
+   ansible.builtin.file:
+    name: /tmp/a
+    state: absent

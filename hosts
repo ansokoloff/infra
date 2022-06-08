@@ -1,0 +1,6 @@
+[dockerfarm]
+10.164.0.9
+[kuber]
+10.164.0.10
+[local]
+localhost ansible_connection=local
