@@ -1,9 +1,9 @@
 ---
-- name: Install software
-  gather_facts: true
-  become: yes
+# - name: Install software
+#   gather_facts: true
+#   become: yes
   
-  tasks:
+#   tasks:
      - name:  Install mc 
        apt:
         pkg:
