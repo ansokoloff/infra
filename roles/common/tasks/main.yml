@@ -8,6 +8,17 @@
     state: present
     update_cache: yes
 
+ - name: Change permissions to docker socket
+   ansible.builtin.file:
+    path: /var/run/docker.sock
+    mode: 0666   
+
+ - name: Create tmp directory
+   ansible.builtin.file:
+    path: /tmp/target
+    state: directory
+    mode: 0777       
+
  - name: Install env
    ansible.builtin.git:
     repo: https://github.com/ansokoloff/myenviroinments.git
