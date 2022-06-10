@@ -73,7 +73,7 @@ resource "google_compute_instance" "dockerfarm" {
 
 resource "google_compute_instance" "kuber" {
     name            = "kuber"
-    machine_type = "n1-standard-1"
+    machine_type = "e2-standard-2"
     zone         = "europe-west4-a"
     depends_on = [ tls_private_key.key_deploy,
       local_file.cloud_pem

@@ -1,0 +1,14 @@
+---
+
+ - hosts: kuber
+   gather_facts: true
+   become: yes
+   roles:
+   - docker
+
+ - hosts: kuber
+   gather_facts: true
+   become: yes
+   roles:
+   - kuber
+ 
