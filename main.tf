@@ -81,7 +81,7 @@ resource "google_compute_instance" "kuber" {
   boot_disk {
     auto_delete = true
     initialize_params {
-      image  = "https://www.googleapis.com/compute/v1/projects/cloud-infra-services-public/global/images/dockercompose-ubun20-03122020"
+      image  = "ubuntu-2004-focal-v20220606"
       labels = {}
       size   = 30
       type   = "pd-standard"
