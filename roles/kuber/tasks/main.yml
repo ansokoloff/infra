@@ -19,8 +19,4 @@
    shell:
     cmd: cp /tmp/kubectl /usr/local/bin/kubectl && chmod 777 /usr/local/bin/minikube
 
-#  - name: Start minikube
-#    ansible.builtin.command: 
-#     cmd: minikube start 
-    
 

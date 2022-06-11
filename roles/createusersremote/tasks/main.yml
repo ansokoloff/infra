@@ -5,7 +5,9 @@
      comment: Jenkins
      shell: /bin/bash
      home: /var/lib/jenkins
-     groups: docker
+     groups: 
+     - jenkins
+     - docker
 
  - name: Create a directory .ssh
    ansible.builtin.file:

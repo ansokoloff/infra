@@ -1,4 +1,10 @@
 ---
+ - hosts: kuber
+   gather_facts: true
+   become: yes
+   roles:
+   - docker
+
  - hosts: all
    gather_facts: true
    become: yes
@@ -35,11 +41,13 @@
    gather_facts: true
    become: yes
    roles:
-   - docker
+   - kuber
 
- - hosts: kuber
+ - hosts:
+   - kuber
+   - localhost
    gather_facts: true
    become: yes
    roles:
-   - kuber
+   - helm
  
